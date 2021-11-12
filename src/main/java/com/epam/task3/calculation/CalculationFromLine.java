@@ -9,7 +9,7 @@ import java.util.*;
  *         "cube(3)+sqrt(4)+3+(-1+3)+0+1*3+6/2";   => 40.0
  *         "cube(3)+sqrt(4)+3+(1+3)+0+1*3+6/2";   => 42.0
  */
-class CalculationFromLine implements Calculator{
+public class CalculationFromLine implements Calculator{
 
     @Override
     public Double calculation(String expression) throws CalculationException {
