@@ -27,13 +27,13 @@ public class CalculationFromLine implements Calculator{
                 } else if (lineValue.matches(MathExpression.PLUS_SIGN_REGEX)) {
                     stack.push(stack.pop() + stack.pop());
                 } else if (lineValue.matches(MathExpression.MINUS_SIGN_REGEX)) {
-                    Double b = stack.pop(), a = stack.pop();
-                    stack.push(a - b);
+                    Double secondValue = stack.pop(), firstValue = stack.pop();
+                    stack.push(firstValue - secondValue);
                 } else if (lineValue.matches(MathExpression.MULTIPLICATION_SIGN_REGEX)) {
                     stack.push(stack.pop() * stack.pop());
                 } else if (lineValue.matches(MathExpression.DIVISION_SIGN_REGEX)) {
-                    Double b = stack.pop(), a = stack.pop();
-                    stack.push(a / b);
+                    Double secondValue = stack.pop(), firstValue = stack.pop();
+                    stack.push(firstValue / secondValue);
                 } else if (lineValue.matches(MathExpression.OPERATOR_MINUS_SIGN_REGEX)) {
                     stack.push(-stack.pop());
                 } else {
